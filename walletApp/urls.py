@@ -4,4 +4,5 @@ from walletApp import views # เอาไฟล์ viwes.py เข้ามา�
 
 urlpatterns = [
     path('', views.index),
+    path('account', views.account)
 ]
