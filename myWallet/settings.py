@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'walletApp' # ลงทะเบียนแอพที่สร้างขึ้น
+    'walletApp', # ลงทะเบียนแอพที่สร้างขึ้น
+    'django.contrib.humanize' # รูปแบบแสดงผลตัวเลข
 ]
 
 MIDDLEWARE = [

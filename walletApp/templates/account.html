@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load humanize %}
 {% block title %}
     <title>Account Overview</title>
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
@@ -17,7 +17,7 @@
             {% for statement in data %}
             <tr>
                 <td>{{statement.name}}</td>
-                <td>{{statement.amount}}</td>
+                <td>{{statement.amount | intcomma}}</td>
                 <td>{{statement.category}}</td>
             </tr>
             {% endfor %}
