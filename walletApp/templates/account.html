@@ -2,11 +2,12 @@
 
 {% block title %}
     <title>Account Overview</title>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 {% endblock %}
 
 {% block content %}
     <h1 class="py-2 text-center">Statement</h1>
-    <table>
+    <table id="statement"> <!--ตั้งชื่อตาราง-->
         <thead>
             <th>Name</th>
             <th>Amount</th>
@@ -22,4 +23,12 @@
             {% endfor %}
         </tbody>
     </table>
+{% endblock %}
+
+{% block footer %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {$('#statement').DataTable()})
+    </script>
 {% endblock %}
