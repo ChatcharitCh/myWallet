@@ -7,6 +7,7 @@ class StatementAdmin(admin.ModelAdmin):
     list_editable = ["amount", "category"]
     list_filter = ["category", "amount"]
     search_fields = ["name"]
+    fields = ["category", "name", "amount"]
 
 # Register your models here.
 admin.site.register(Statement, StatementAdmin)
